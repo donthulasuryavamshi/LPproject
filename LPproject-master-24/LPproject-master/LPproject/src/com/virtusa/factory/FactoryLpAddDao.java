@@ -5,7 +5,7 @@ import com.virtusa.Daos.LpAddinDao;
 
 public class FactoryLpAddDao {
 
-	public LpAddinDao createLpListDao() {
+	public static LpAddinDao createLpListDao() {
 		LpAddinDao lpAddinDao = new LpAddinDao();
 		return lpAddinDao;
 	}

@@ -1,39 +1,41 @@
 package com.virtusa.view;
 
 import com.virtusa.Daos.LpAddinDao;
+import com.virtusa.entities.LPDetails;
 import com.virtusa.factory.FactoryLpAddDao;
+import com.virtusa.models.LPAddModel;
 
 public class AddingLps {
 
 	private LpAddinDao lpAddDao=null;
 	
-	public boolean LpAddService(){
+	public AddingLps(){
 		this.lpAddDao=FactoryLpAddDao.createLpListDao();
 		
 	}
-	public boolean storeStudentSevice(StudentModel studentmodel) {
+	public boolean storeStudentSevice(LPAddModel lpAddmodel) {
 			// TODO Auto-generated method stub
 		
-		Student student=new Student();
-		student.setRollNo(studentmodel.getRollNo());
+		//L p l p=new L p();
+		//lp.setLpId(lpAddmodel.getLpId());
 			
-		StudentDetails studentDetails=new StudentDetails();
-		studentDetails.setFirstName(studentmodel.getFirstName());
-		studentDetails.setLastName(studentmodel.getLastName());
-		studentDetails.setStudentDetailsId(1);
-		studentDetails.setEmail(studentmodel.getEmail());
-		studentDetails.setPhoneNumber(studentmodel.getPhoneNumber());
+		LPDetails lpDetails=new LPDetails();
+		lpDetails.setLPId(lpAddmodel.getLpId());
+		lpDetails.setLPfirstName(lpAddmodel.getLpfirstName());
+		lpDetails.setLPlastName(lpAddmodel.getLplastName());
+		//lpDetails.setStudentDetailsId(1);
+		lpDetails.setLPemail(lpAddmodel.getLpemail());
+		lpDetails.setLPphoneNumber(lpAddmodel.getLpphoneNumber());
 		
-		student.setStudentDetails(studentDetails);
-		Course course=new Course();
-		course.setCourseId(studentmodel.getCourseId());
+		//lpDetails.setDetails(lpDetails);
+		//Course course=new Course();
+		//course.setCourseId(studentmodel.getCourseId());
 			
-		student.setCourse(course);
+		//student.setCourse(course);
 			
-		return studentDAO.persistStudent(student);
-			
-			
-			
-			
+		return lpAddDao.addingLpDetails(lpDetails);
+				
 		}
+	
+	
 }

@@ -4,6 +4,9 @@ import java.io.BufferedReader;
 //import java.io.IOException;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
+
+//import com.virtusa.controller.MainController;
+import com.virtusa.controller.ViewLpController;
 //import java.io.Reader;
 
 public class AdminView {
@@ -29,6 +32,8 @@ public class AdminView {
 				break;
 			
 			case 2:
+				ViewLpController vlc = new ViewLpController();
+				vlc.displayStudentDetails();
 				break;
 			
 			case 3:

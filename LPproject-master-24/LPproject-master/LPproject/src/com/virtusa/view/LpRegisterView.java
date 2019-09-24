@@ -43,7 +43,10 @@ public class LpRegisterView {
 		
 		LPAddController lpAddController=new LPAddController();
 		lpAddController.storeLpDetails(lpAddModel);//may happen
-		//mainMenu();
+		
+		AdminView av =new AdminView();
+			av.adminMenuOptions();
+		
 		buffer.close();
 		}catch(Exception e) {
 			e.printStackTrace();
