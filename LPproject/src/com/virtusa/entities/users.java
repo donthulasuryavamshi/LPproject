@@ -16,6 +16,10 @@ public class users {
 	public void setPassword(String password) {
 		Password = password;
 	}
+	@Override
+	public String toString() {
+		return "users [UserName=" + UserName + ", Password=" + Password + "]";
+	}
 	
 	
 }

@@ -9,9 +9,15 @@ public class LoginView {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		LoginView lv = new LoginView();
+		lv.Menu();
+	}
+		
+	public void Menu(){
 		try {
-		InputStreamReader reader=new InputStreamReader(System.in);
-		BufferedReader buffer=new BufferedReader(reader);
+			InputStreamReader reader=new InputStreamReader(System.in);
+			BufferedReader buffer=new BufferedReader(reader);
+			
 		System.out.println("welcome to the login portal!!");
 		System.out.println("entre your credentials to login:");
 		System.out.println("username:");
@@ -19,10 +25,14 @@ public class LoginView {
 		System.out.println("password");
 		String Password = buffer.readLine();
 		MainController mainControl = new MainController();
+		//System.out.println("one");
 		mainControl.Authenticate(Username,Password);
+		//System.out.println("two");
 		}catch(Exception e) {
-			System.out.println("check exeception at login page!!");
+			System.out.println("check exeception at loginView page!!");
+			e.printStackTrace();
 		}
 	}
-
+	
 }
+

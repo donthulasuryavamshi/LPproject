@@ -5,8 +5,6 @@ import java.util.List;
 
 import com.virtusa.entities.Admin;
 import com.virtusa.entities.users;
-import com.virtusa.userslogin.Lp;
-import com.virtusa.userslogin.Users;
 
 public class UserAuth {
 	
@@ -17,5 +15,9 @@ public class UserAuth {
 		admin.setUserName("admin");
 		admin.setPassword("admin");
 		UserAuth.add(admin);
+	}
+	public static List<users> getUserAuth(){
+	
+		return UserAuth;
 	}
 }

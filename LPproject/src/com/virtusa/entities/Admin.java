@@ -1,6 +1,6 @@
 package com.virtusa.entities;
 
-public class Admin {
+public class Admin extends users {
 	private String UserName;
 	private String Password;
 	public String getUserName() {
@@ -14,6 +14,10 @@ public class Admin {
 	}
 	public void setPassword(String password) {
 		Password = password;
+	}
+	@Override
+	public String toString() {
+		return "Admin [UserName=" + UserName + ", Password=" + Password + "]";
 	}
 	
 
