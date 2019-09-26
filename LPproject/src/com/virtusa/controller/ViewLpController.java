@@ -1,15 +1,20 @@
 package com.virtusa.controller;
 
+//import java.util.ArrayList;
 import java.util.List;
+
 import com.virtusa.models.LPAddModel;
+import com.virtusa.sesrvices.LPAddService;
+//import java.util.List;
+//import com.virtusa.models.LPAddModel;
 import com.virtusa.sesrvices.LpDetailsRetrieval;
 //import com.virtusa.view.LPDetailsList;
 
 public class ViewLpController {
-
-	private ViewLpController() {
-		ViewLpController.displayStudentDetails()
-	}
+private LPAddService lpAddService;
+	//private ViewLpController() {
+		//ViewLpController.displayStudentDetails()
+	//}
 	//LpDetailsRetrieval lpDetailsRetrieval = new LpDetailsRetrieval();
 
 	//public void viewLP(){
@@ -24,9 +29,11 @@ public class ViewLpController {
 		//lpDetailsRetrieval.retrieveLpDetailsService();
 	//}
 
-	public void displayStudentDetails(List<LPAddModel> LpDetailsModel){
+	public void displayStudentDetails(){
     	
-    	LpDetailsModel.forEach(System.out::println);
+    	List<LPAddModel> lpAddModel =lpAddService.retrieveLpDetailsService() ; 
+    	LpDetailsRetrieval ldr = new LpDetailsRetrieval();
+    	ldr.retrieveLpDetailsService();
     }
 
 }

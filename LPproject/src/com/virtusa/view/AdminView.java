@@ -4,10 +4,15 @@ import java.io.BufferedReader;
 //import java.io.IOException;
 //import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 
+import com.virtusa.controller.LPAddController;
+import com.virtusa.models.LPAddModel;
 //import com.virtusa.controller.MainController;
-import com.virtusa.controller.ViewLpController;
+//import com.virtusa.controller.ViewLpController;
 //import java.io.Reader;
+//import com.virtusa.sesrvices.LPAddService;
+//import com.virtusa.sesrvices.LPAddService;
 
 public class AdminView {
 
@@ -32,8 +37,8 @@ public class AdminView {
 				break;
 			
 			case 2:
-				ViewLpController vlc = new ViewLpController();
-				vlc.displayStudentDetails();
+				LPAddController lac = new LPAddController();
+				lac.viewLPDetails();
 				break;
 			
 			case 3:
@@ -55,5 +60,10 @@ public class AdminView {
 			e.printStackTrace();
 		}
 }
+	public void lpDetailsView(List<LPAddModel> lpModel) {
+		for(LPAddModel lpDetails: lpModel) {
+			System.out.println(lpDetails);
+		}
+	}
 
 }
